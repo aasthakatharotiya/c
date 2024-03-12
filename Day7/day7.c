@@ -59,7 +59,14 @@ void main(){
             {
                 printf("%d : First is Maximum Number",max_1);
             }
-            
+            else
+            {
+                printf("%d : Fourth is Maximum Number",max_4);
+            }
+        }
+        else
+        {
+            printf("%d : Third is Maximum Number",max_3);
         }
     }
 
@@ -69,7 +76,6 @@ void main(){
         {
             printf("%d : Second is Maximum Number",max_2);
         }
-            
     }
     else if (max_3>max_4)
     {
@@ -80,6 +86,6 @@ void main(){
     {
         printf("%d : Fourth is Maximum Number",max_4);
     }
-    
+       
    
 }
