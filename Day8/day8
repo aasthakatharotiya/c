@@ -1,0 +1,143 @@
+#include <stdio.h>
+
+void main(){
+
+    //Question-1
+
+    int num_1,num_2,num_3;
+    printf("Enter First Number:");
+    scanf("%d",&num_1);
+    printf("Enter Second Number:");
+    scanf("%d",&num_2);
+    printf("Enter Third Number:");
+    scanf("%d",&num_3);
+    
+    (num_1<num_2) ? (num_1<num_3) ? 
+    printf("%d is Minimum Number",num_1) : 
+    printf("%d is Minimum Number",num_3) : 
+    (num_2<num_3) ? 
+    printf("%d is Minimum Number",num_2) : 
+    printf("%d is Minimum Number",num_3);
+    
+
+    //Question-2
+
+    printf("Press 1 For Pizza");
+    printf("\nPress 1 For Ice Cream");
+    printf("\nPress 1 For Pani-Puri");
+    
+    
+    int choice, sub_choice;
+    printf("\n\nEnter Your Choice: ");
+    scanf("%d",&choice);
+    
+    switch(choice)
+    {
+        case 1:
+            printf("\nPress 1 For Margherita Pizza");
+            printf("\nPress 2 For Cheese Pizza");
+            printf("\nPress 3 For Paneer Pasta Pizza");
+            printf("\nPress 4 For Mexican Pizza");
+            printf("\nPress 5 For Tandoori Paneer Pizza");
+            
+            printf("\n\nEnter Your Sub Choice: ");
+            scanf("%d",&sub_choice);
+            
+            switch(sub_choice)
+            {
+                case 1:
+                    printf("Margherita Pizza Ordered");
+                    break;
+                case 2:
+                    printf("Cheese Pizza Ordered");
+                    break;
+                case 3:
+                    printf("Paneer Pasta Pizza Ordered");
+                    break;
+                case 4:
+                    printf("Mexican Pizza Ordered");
+                    break;
+                case 5:
+                    printf("Tandoori Paneer Pizza Ordered");
+                    break;
+                default:
+                    printf("Not Available");
+            }
+            
+            break;
+        
+        
+        case 2:
+            printf("\nPress 1 For Butterscotch");
+            printf("\nPress 2 For Black Berry");
+            printf("\nPress 3 For American Dry Fruit");
+            printf("\nPress 4 For Chocolate Chip");
+            printf("\nPress 5 For Vanilla");
+            
+            printf("\n\nEnter Your Sub Choice: ");
+            scanf("%d",&sub_choice);
+            
+            switch(sub_choice)
+            {
+                case 1:
+                    printf("Butterscotch Ordered");
+                    break;
+                case 2:
+                    printf("Black Berry Ordered");
+                    break;
+                case 3:
+                    printf("American Dry Fruit Ordered");
+                    break;
+                case 4:
+                    printf("Chocolate Chip Ordered");
+                    break;
+                case 5:
+                    printf("Vanilla Ordered");
+                    break;
+                default:
+                    printf("Not Available");
+            }
+            
+            break;
+        
+        
+        case 3:
+            printf("\nPress 1 For 7 Flavor Pani-Puri");
+            printf("\nPress 2 For Sev-Puri");
+            printf("\nPress 3 For Dahi-Puri");
+            printf("\nPress 4 For Bhel-Puri");
+            printf("\nPress 5 For Basket-Puri");
+            
+            printf("\n\nEnter Your Sub Choice: ");
+            scanf("%d",&sub_choice);
+            
+            switch(sub_choice)
+            {
+                case 1:
+                    printf("7 Flavor Pani-Puri Ordered");
+                    break;
+                case 2:
+                    printf("Sev-Puri Ordered");
+                    break;
+                case 3:
+                    printf("Dahi-Puri Ordered");
+                    break;
+                case 4:
+                    printf("Bhel-Puri Ordered");
+                    break;
+                case 5:
+                    printf("Basket-Puri Ordered");
+                    break;
+                default:
+                    printf("Not Available");
+            }
+            
+            break;
+        
+        
+        default:
+            printf("Not Available");
+    }
+       
+   
+}
