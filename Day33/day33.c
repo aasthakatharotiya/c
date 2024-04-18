@@ -3,6 +3,7 @@
 int main()
 {
     //Question-1
+    //find the sum of elements in an array
 
     int size_num,arr_sum[size_num],sum=0;
     printf("Enter Array Size : ");
@@ -22,6 +23,7 @@ int main()
 
 
     //Question-2
+    //find the largest element in an array
 
     int size_max,arr_max[size_max],max;
     max=arr_max[0];
@@ -44,6 +46,7 @@ int main()
 
 
     //Question-3
+    //find the smallest element in an array
     
     int min, size_min, arr_min[size_min];
  
@@ -68,23 +71,24 @@ int main()
  
 
     //Question-4
+    //count the number of even and odd elements in an array
 
-    int a, even = 0, odd = 0;
+    int size, even = 0, odd = 0;
 
-    printf("Enter Size Of Array :");
-    scanf("%d", &a);
+    printf("\n\nEnter Size Of Array :");
+    scanf("%d", &size);
+    
+    int odd_even[size];
 
-    int arr[a];
-
-    for (int i = 0; i < a; i++)
+    for (int i=0; i<size; i++)
     {
-        printf("Enter Value of Array :");
-        scanf("%d", &arr[i]);
+        printf("a[%d] : ",i);
+        scanf("%d", &odd_even[i]);
     }
 
-    for (int i = 0; i < a; i++)
+    for (int i=0; i<size; i++)
     {
-        if (arr[i] % 2 == 0)
+        if (odd_even[i] % 2 == 0)
         {
             even ++;
         }
@@ -92,12 +96,12 @@ int main()
             odd++;
         }
     }
-    printf("\n");
-    printf("Even :%d\n",even);
-    printf("Odd :%d",odd);
+    printf("\nEven Number : %d",even);
+    printf("\nOdd Number : %d",odd);
 
  
     //Question-5
+    //reverse an array
 
     int size_rev, arr_rev[size_rev];
     
@@ -116,86 +120,107 @@ int main()
     }
 
 
-    return 0;
-
-
     //Question-6
+    //merge two arrays into a third array
 
-    int a[50], b[50], merged[100], n1, n2;
-
-    printf("Enter the size of the first array: ");
-    scanf("%d", &n1);
-    printf("Enter %d elements for the first array:\n", n1);
-    for(int i = 0; i < n1; i++) {
-        scanf("%d", &a[i]);
+    int size_arr1, size_arr2, arr_1[size_arr1], arr_2[size_arr2], resize, merge_arr[resize], merge;
+    
+    printf("\n\nEnter First Array Size : ");
+    scanf("%d",&size_arr1);
+    
+    for(int i=0; i<size_arr1; i++)
+    {
+        printf("a[%d] = ",i);
+        scanf("%d",&arr_1[i]);
     }
-
-
-    printf("Enter the size of the second array: ");
-    scanf("%d", &n2);
-    printf("Enter %d elements for the second array:\n", n2);
-    for(int i = 0; i < n2; i++) {
-        scanf("%d", &b[i]);
+    
+    printf("\nEnter Second Array Size : ");
+    scanf("%d",&size_arr2);
+    
+    for(int i=0; i<size_arr2; i++)
+    {
+        printf("a[%d] = ",i);
+        scanf("%d",&arr_2[i]);
     }
-
-    for(int i = 0; i < n1; i++) {
-        merged[i] = a[i];
+    
+    for(int i=0; i<size_arr1; i++)
+    {
+        merge_arr[i] = arr_1[i];
     }
-    for(int i = 0; i < n2; i++) {
-        merged[n1+i] = b[i]; 
+    for(int i=0; i<size_arr2; i++)
+    {
+        merge_arr[size_arr1+i] = arr_2[i];
     }
-
-
-    printf("Merged array is:\n");
-    for(int i = 0; i < n1 + n2; i++) {
-        printf("%d ", merged[i]);
-    }    
+    
+    printf("\n---Merge Array---\n");
+    for(int i=0; i<size_arr1 + size_arr2; i++)
+    {
+        printf("a[%d] = %d\n",i,merge_arr[i]);
+    }
 
 
 
     //Question-7
+    //find the second largest element in an array
 
-    int array[10] = {101, 11, 3, 4, 50, 69, 7, 8, 9, 0};
-    int loop, largest, second;
-
-    if(array[0] > array[1]) {
-        largest = array[0];
-        second  = array[1];
-    } else {
-        largest = array[1];
-        second  = array[0];
+    int size_larg, largest, second;
+    
+    printf("\n\nEnter Array Size : ");
+    scanf("%d",&size_larg);
+    
+    int arr_larg[size_larg];
+    
+    for(int i=0; i<size_larg; i++)
+    {
+        printf("a[%d] = ",i);
+        scanf("%d",&arr_larg[i]);
+    }
+    
+    if(arr_larg[0] > arr_larg[1])
+    {
+        largest = arr_larg[0];
+        second  = arr_larg[1];
+    }
+    else
+    {
+        largest = arr_larg[1];
+        second  = arr_larg[0];
     }
 
-    for(loop = 2; loop < 10; loop++) {
-        if( largest < array[loop] ) {
+    for(int i=2; i<size_larg; i++) {
+        if(largest < arr_larg[i])
+        {
             second = largest;
-            largest = array[loop];
-        } else if( second < array[loop] ) {
-            second =  array[loop];
+            largest = arr_larg[i];
+        }
+        else if(second < arr_larg[i])
+        {
+            second =  arr_larg[i];
         }
     }
-
-    printf(" Second largest - %d \n", second);   
+    printf("Second largest = %d",second);   
 
 
     //Question-8
+    //find the intersection of two arrays
 
-    int size1, size2;
+    int size1, size2, a[size1], b[size2], intersection[size1];
     printf("Enter size of first array: ");
     scanf("%d", &size1);
     printf("Enter size of second array: ");
     scanf("%d", &size2);
-    int a[size1];
-    int b[size2];
-    int intersection[size1];
-    for (int i = 0; i < size1; i++) {
-        printf("Enter elements of first array: ");
+
+    printf("---First array---\n");
+    for (int i=0; i<size1; i++) {
+        printf("a[%d] : ",i);
         scanf("%d", &a[i]);
     }
-    for (int i = 0; i < size2; i++) {
-        printf("Enter elements of second array: ");
+    printf("---Second array---\n");
+    for (int i=0; i<size2; i++) {
+        printf("a[%d] : ",i);
         scanf("%d", &b[i]);
     }
+
     int k = 0;
     for (int i = 0; i < size1; i++) {
         for (int j = 0; j < size2; j++) {
@@ -213,10 +238,10 @@ int main()
             }
         }
     }
-    printf("Intersection of two arrays is: ");
-    for (int i = 0; i < k; i++) {
+    printf("Intersection of two arrays is : ");
+    for(int i = 0; i < k; i++)
+    {
         printf("%d ", intersection[i]);
     }
-    printf("\n");
         
 }
