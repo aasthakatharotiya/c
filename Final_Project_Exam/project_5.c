@@ -7,7 +7,7 @@ num_swap(int *n1, int *n2)
     temp = *n1;
     *n1 = *n2;
     *n2 = temp;
-    printf("--- After Swapping ---");
+    printf("\n--- After Swapping ---");
     printf("\nFirst Number : %d",*n1);
     printf("\nSecond Number : %d",*n2);
 }
